@@ -3,66 +3,283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-      <link rel="stylesheet" href="input.css">
-      <!-- Awsome Font -->
-       <script src="https://kit.fontawesome.com/2b46095725.js" crossorigin="anonymous"></script>
-    <title>Business Tracker World</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Awsome Font -->
+    <script src="https://kit.fontawesome.com/2b46095725.js" crossorigin="anonymous"></script>
+    <title>Tracker World — All-in-One Business Tracker</title>
 </head>
-<body class="bg-blue-600">
+<body class="antialiased">
 
-<header class="bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-16 px-6 text-center shadow-lg">
-  <div class="max-w-5xl mx-auto">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to Tracker World</h1>
-    <p class="text-lg md:text-xl mb-6">Your all-in-one business tracker to simplify finances, inventory, sales, and more.</p>
-    
-    <div class="flex justify-center mb-6">
-      <i class="fa-solid fa-clipboard-list text-6xl md:text-7xl"></i>
-    </div>
-
-    <a href="trackers.html" class="bg-yellow-300 text-blue-900 font-bold py-3 px-6 rounded-full hover:bg-yellow-400 transition">
-      Get Started
-    </a>
-  </div>
+<!-- NAV -->
+<header class="fixed top-4 inset-x-0 z-50 px-4">
+    <nav class="nav-pill max-w-3xl mx-auto flex items-center justify-between gap-4 pl-5 pr-2 py-2">
+        <a href="index.html" class="flex items-center gap-2 shrink-0">
+            <span class="w-7 h-7 rounded-full border border-[var(--accent)] flex items-center justify-center">
+                <span class="w-2 h-2 rounded-full bg-[var(--accent)]"></span>
+            </span>
+            <span class="font-bold tracking-tight text-white text-sm">Tracker World</span>
+        </a>
+        <ul class="hidden md:flex items-center gap-6">
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="trackers.html" class="nav-link">Trackers</a></li>
+            <li><a href="aboutUs.html" class="nav-link">About Us</a></li>
+        </ul>
+        <a href="trackers.html" class="btn-accent text-sm px-4 py-2">Get Started</a>
+    </nav>
 </header>
 
-    <div class="flex flex-col items-center pt-5">
-    <h1 class="text-4xl text-white">Small</h1>
-    <img class="w-80" src="https://businesstracker.org/static/img/logos/logo.png" alt="">
+<!-- HERO -->
+<section class="relative pt-40 pb-24 px-6 overflow-hidden">
+    <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+            <span class="badge badge-accent">// All-in-one business tracker</span>
+            <h1 class="mt-5 text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.05] text-white">
+                Run your hustle.<br>
+                <span class="accent-text">Track everything.</span>
+            </h1>
+            <p class="mt-6 text-lg text-muted max-w-md">
+                Log income, expenses, sales, inventory, payments, and tasks in one dashboard —
+                built for food vendors, freelancers, pop-ups, and local hustlers.
+            </p>
+            <div class="mt-8 flex flex-wrap items-center gap-4">
+                <a href="trackers.html" class="btn-accent text-sm px-6 py-3">Start Tracking</a>
+                <a href="aboutUs.html" class="btn-outline text-sm px-6 py-3">Learn more</a>
+            </div>
+            <div class="mt-10 flex items-center gap-6 font-mono-ui text-xs text-faint">
+                <span>NO SIGNUP</span>
+                <span class="w-1 h-1 rounded-full bg-[var(--border-strong)]"></span>
+                <span>$0 COST</span>
+                <span class="w-1 h-1 rounded-full bg-[var(--border-strong)]"></span>
+                <span>WORKS OFFLINE</span>
+            </div>
+        </div>
+
+        <!-- Flow graphic -->
+        <div class="relative h-80 md:h-96 hidden sm:block">
+            <div class="absolute right-4 top-2 w-64 glass-card px-5 py-3 -skew-y-2 hover:skew-y-0 transition">
+                <p class="eyebrow">01</p>
+                <p class="text-sm font-semibold text-white mt-1">Log a sale</p>
+            </div>
+            <div class="absolute right-16 top-24 w-64 rounded-[14px] px-5 py-3 -skew-y-2 hover:skew-y-0 transition bg-[var(--accent)] text-[#06110c] shadow-[0_20px_50px_-20px_var(--accent-glow)]">
+                <p class="font-mono-ui text-[11px] tracking-widest opacity-70">02</p>
+                <p class="text-sm font-bold mt-1">Update inventory</p>
+            </div>
+            <div class="absolute right-2 top-[11rem] w-64 glass-card px-5 py-3 -skew-y-2 hover:skew-y-0 transition">
+                <p class="eyebrow">03</p>
+                <p class="text-sm font-semibold text-white mt-1">Record a payment</p>
+            </div>
+            <div class="absolute right-20 top-[17rem] w-64 glass-card px-5 py-3 -skew-y-2 hover:skew-y-0 transition">
+                <p class="eyebrow">04</p>
+                <p class="text-sm font-semibold text-white mt-1">Review your balance</p>
+            </div>
+        </div>
     </div>
-
-    <section class="bg-white px-6 py-12 text-center max-w-4xl mx-auto rounded shadow-lg mt-10">
-  <h1 class="text-4xl font-bold text-blue-700 mb-4">Take Control of Your Business</h1>
-  <p class="text-lg text-gray-700 mb-6">
-    Tracker World is your all-in-one tracker for managing income, expenses, sales, inventory, services, and more.
-    Designed for small business owners who want to stay organized and in control — without the stress.
-  </p>
-
-  <div class="grid gap-4 md:grid-cols-2 text-left text-gray-800 mb-6">
-    <ul class="list-disc pl-6">
-      <li><strong>Finances</strong> – Log income, expenses & view totals</li>
-      <li><strong>Purchases</strong> – Track what you buy & why</li>
-      <li><strong>Payments</strong> – Record received & due payments</li>
-      <li><strong>Inventory</strong> – Stay stocked & ready</li>
-    </ul>
-    <ul class="list-disc pl-6">
-      <li><strong>Sales</strong> – Track who bought what & when</li>
-      <li><strong>Tasks</strong> – Manage your daily to-do list</li>
-      <li><strong>Clients & Vendors</strong> – Log relationships & contacts</li>
-      <li><strong>Services</strong> – Keep track of completed jobs</li>
-    </ul>
-  </div>
-
-  <p class="text-gray-700 mb-6">
-    Built for food vendors, freelancers, pop-up shops, and local hustlers — Tracker World helps you ditch the clutter
-    and run your business like a pro.
-  </p>
-
-  <a href="trackers.html" class="bg-blue-600 text-white font-bold py-3 px-6 rounded hover:bg-blue-700 transition">
-    Start Tracking Now
-  </a>
 </section>
 
+<!-- TRACKER TILES -->
+<section class="px-6 pb-8">
+    <div class="max-w-6xl mx-auto">
+        <p class="eyebrow text-center">Everything in one place</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-white text-center mt-2">Eight trackers. One dashboard.</h2>
+        <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <a href="trackers.html" class="tile flex flex-col items-center justify-center gap-3 py-8">
+                <i class="fa-solid fa-wallet text-2xl tile-icon"></i>
+                <span class="text-sm font-semibold text-white">Finance</span>
+            </a>
+            <a href="trackers.html" class="tile flex flex-col items-center justify-center gap-3 py-8">
+                <i class="fa-solid fa-cart-shopping text-2xl tile-icon"></i>
+                <span class="text-sm font-semibold text-white">Purchases</span>
+            </a>
+            <a href="trackers.html" class="tile flex flex-col items-center justify-center gap-3 py-8">
+                <i class="fa-solid fa-money-bill-transfer text-2xl tile-icon"></i>
+                <span class="text-sm font-semibold text-white">Payments</span>
+            </a>
+            <a href="trackers.html" class="tile flex flex-col items-center justify-center gap-3 py-8">
+                <i class="fa-solid fa-boxes-stacked text-2xl tile-icon"></i>
+                <span class="text-sm font-semibold text-white">Inventory</span>
+            </a>
+            <a href="trackers.html" class="tile flex flex-col items-center justify-center gap-3 py-8">
+                <i class="fa-solid fa-chart-line text-2xl tile-icon"></i>
+                <span class="text-sm font-semibold text-white">Sales</span>
+            </a>
+            <a href="trackers.html" class="tile flex flex-col items-center justify-center gap-3 py-8">
+                <i class="fa-solid fa-list-check text-2xl tile-icon"></i>
+                <span class="text-sm font-semibold text-white">Tasks</span>
+            </a>
+            <a href="trackers.html" class="tile flex flex-col items-center justify-center gap-3 py-8">
+                <i class="fa-solid fa-address-book text-2xl tile-icon"></i>
+                <span class="text-sm font-semibold text-white">Clients</span>
+            </a>
+            <a href="trackers.html" class="tile flex flex-col items-center justify-center gap-3 py-8">
+                <i class="fa-solid fa-screwdriver-wrench text-2xl tile-icon"></i>
+                <span class="text-sm font-semibold text-white">Services</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURE BENTO -->
+<section class="px-6 py-24">
+    <div class="max-w-6xl mx-auto">
+        <p class="eyebrow text-center">Built for the daily hustle</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-white text-center mt-2 max-w-xl mx-auto">
+            Take control without the spreadsheet headache
+        </h2>
+
+        <div class="mt-12 grid md:grid-cols-3 gap-5">
+            <!-- Big spotlight card -->
+            <div class="glass-card md:col-span-2 p-8 flex flex-col md:flex-row items-center gap-8">
+                <div class="flex-1">
+                    <span class="eyebrow">Finance Tracker</span>
+                    <h3 class="text-xl font-bold text-white mt-2">Know your numbers at a glance</h3>
+                    <p class="text-muted text-sm mt-3">
+                        Log every income and expense, tag it by category, and watch your
+                        real-time balance update automatically. No formulas required.
+                    </p>
+                </div>
+                <div class="w-full md:w-56 glass-card !bg-white/[0.03] p-5 shrink-0">
+                    <p class="font-mono-ui text-[11px] text-faint uppercase tracking-widest">This month</p>
+                    <p class="mt-3 text-sm text-muted">Total Income <span class="float-right text-white font-semibold">$4,280</span></p>
+                    <p class="mt-2 text-sm text-muted">Total Expense <span class="float-right text-white font-semibold">$1,915</span></p>
+                    <div class="mt-3 pt-3 border-t border-[var(--border)] flex justify-between items-center">
+                        <span class="text-sm text-muted">Balance</span>
+                        <span class="accent-text font-bold">$2,365</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-8">
+                <i class="fa-solid fa-cloud-arrow-down text-xl tile-icon"></i>
+                <h3 class="text-white font-bold mt-4">Works right in your browser</h3>
+                <p class="text-muted text-sm mt-2">Your data is saved locally — no account, no server, no waiting on wifi.</p>
+            </div>
+
+            <div class="glass-card p-8">
+                <i class="fa-solid fa-mobile-screen-button text-xl tile-icon"></i>
+                <h3 class="text-white font-bold mt-4">Built for your phone</h3>
+                <p class="text-muted text-sm mt-2">Log a sale between orders. Every tracker is designed mobile-first.</p>
+            </div>
+
+            <div class="glass-card p-8 md:col-span-2">
+                <i class="fa-solid fa-tags text-xl tile-icon"></i>
+                <h3 class="text-white font-bold mt-4">Categorized for real business</h3>
+                <p class="text-muted text-sm mt-2 max-w-md">Income, expenses, purchases, and services are pre-loaded with categories built for food vendors, freelancers, and pop-up shops — not generic corporate line items.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="px-6 py-24 border-y border-[var(--border)]">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-10">
+        <div>
+            <span class="step-num inline-flex w-9 h-9 rounded-full items-center justify-center text-sm">01</span>
+            <h3 class="text-white font-bold mt-4">Pick a tracker</h3>
+            <p class="text-muted text-sm mt-2">Choose finance, sales, inventory, payments, or tasks from your dashboard.</p>
+        </div>
+        <div>
+            <span class="step-num inline-flex w-9 h-9 rounded-full items-center justify-center text-sm">02</span>
+            <h3 class="text-white font-bold mt-4">Log your activity</h3>
+            <p class="text-muted text-sm mt-2">Fill a short form as it happens — a sale, a purchase, a payment, a task.</p>
+        </div>
+        <div>
+            <span class="step-num inline-flex w-9 h-9 rounded-full items-center justify-center text-sm">03</span>
+            <h3 class="text-white font-bold mt-4">Watch it add up</h3>
+            <p class="text-muted text-sm mt-2">Totals, balances, and stock levels update instantly — no math required.</p>
+        </div>
+    </div>
+</section>
+
+<!-- STATS -->
+<section class="px-6 py-20">
+    <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+            <p class="text-4xl font-extrabold text-white">8</p>
+            <p class="eyebrow mt-2">Trackers</p>
+        </div>
+        <div>
+            <p class="text-4xl font-extrabold text-white">$0</p>
+            <p class="eyebrow mt-2">To get started</p>
+        </div>
+        <div>
+            <p class="text-4xl font-extrabold text-white">100%</p>
+            <p class="eyebrow mt-2">Your data, local</p>
+        </div>
+        <div>
+            <p class="text-4xl font-extrabold text-white">0</p>
+            <p class="eyebrow mt-2">Signups required</p>
+        </div>
+    </div>
+</section>
+
+<!-- MOBILE MOCKUP -->
+<section class="px-6 py-24">
+    <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+            <span class="eyebrow">On the go</span>
+            <h2 class="text-2xl md:text-3xl font-bold text-white mt-3">Every entry, right where you left it</h2>
+            <p class="text-muted text-sm mt-4 max-w-md">
+                Sales, payments, and inventory logs render as clean, tappable cards —
+                so checking today's numbers takes seconds, not a spreadsheet scroll.
+            </p>
+            <a href="trackers.html" class="btn-outline text-sm px-6 py-3 mt-6 inline-block">See it in action</a>
+        </div>
+
+        <div class="flex justify-center">
+            <div class="w-72 rounded-[2.5rem] border border-[var(--border-strong)] bg-[var(--bg-soft)] p-3 glow-border">
+                <div class="rounded-[2rem] bg-[#0a0f0d] p-4">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="font-bold text-white text-sm">Sales</span>
+                        <span class="btn-accent text-[10px] px-3 py-1">+ New</span>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="data-card">
+                            <p class="badge badge-accent inline-block mb-2">Cash</p>
+                            <p><strong>Item</strong> Beef Tacos (20ct)</p>
+                            <p><strong>Total</strong> $50.00</p>
+                            <p class="text-faint text-xs mt-2">Today, 12:40pm</p>
+                        </div>
+                        <div class="data-card">
+                            <p class="badge badge-soon inline-block mb-2">Zelle</p>
+                            <p><strong>Item</strong> Birria Kit (5)</p>
+                            <p><strong>Total</strong> $125.00</p>
+                            <p class="text-faint text-xs mt-2">Today, 11:02am</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="px-6 pb-24">
+    <div class="max-w-4xl mx-auto glass-card glow-border text-center px-8 py-16">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white">Ready to take control of your business?</h2>
+        <p class="text-muted mt-4 max-w-md mx-auto">Start logging your first sale, expense, or task in under a minute — no account needed.</p>
+        <a href="trackers.html" class="btn-accent text-sm px-8 py-3 mt-8 inline-block">Start Tracking Now</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-[var(--border)] px-6 py-10">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        <a href="index.html" class="flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full border border-[var(--accent)] flex items-center justify-center">
+                <span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)]"></span>
+            </span>
+            <span class="font-bold text-white text-sm">Tracker World</span>
+        </a>
+        <ul class="flex items-center gap-6">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="trackers.html" class="nav-link">Trackers</a></li>
+            <li><a href="aboutUs.html" class="nav-link">About Us</a></li>
+        </ul>
+        <p class="font-mono-ui text-xs text-faint">© 2026 Tracker World — built by Julio Salas</p>
+    </div>
+</footer>
 
 </body>
 </html>

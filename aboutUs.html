@@ -3,36 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-      <link rel="stylesheet" href="input.css">
-      <!-- Awsome Font -->
-       <script src="https://kit.fontawesome.com/2b46095725.js" crossorigin="anonymous"></script>
-    <title>About Us</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Awsome Font -->
+    <script src="https://kit.fontawesome.com/2b46095725.js" crossorigin="anonymous"></script>
+    <title>About Us — Tracker World</title>
 </head>
-<body>
+<body class="antialiased">
 
-    <nav class="bg-gray-100 pb-4">
-        <ol class="flex flex-row justify-evenly pt-4 ">
-            <li class="bg-blue-600 text-white font-bold py-3 px-6 rounded hover:bg-blue-700 transition"><a href="index.html">Home</a></li>
-            <li class="bg-blue-600 text-white font-bold py-3 px-6 rounded hover:bg-blue-700 transition"><a href="trackers.html">Trackers</a></li>
-            <li class="bg-blue-600 text-white font-bold py-3 px-6 rounded hover:bg-blue-700 transition"><a href="aboutUs.html">About Us</a></li>
-        </ol>
+<!-- NAV -->
+<header class="fixed top-4 inset-x-0 z-50 px-4">
+    <nav class="nav-pill max-w-3xl mx-auto flex items-center justify-between gap-4 pl-5 pr-2 py-2">
+        <a href="index.html" class="flex items-center gap-2 shrink-0">
+            <span class="w-7 h-7 rounded-full border border-[var(--accent)] flex items-center justify-center">
+                <span class="w-2 h-2 rounded-full bg-[var(--accent)]"></span>
+            </span>
+            <span class="font-bold tracking-tight text-white text-sm">Tracker World</span>
+        </a>
+        <ul class="hidden md:flex items-center gap-6">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="trackers.html" class="nav-link">Trackers</a></li>
+            <li><a href="aboutUs.html" class="nav-link active">About Us</a></li>
+        </ul>
+        <a href="trackers.html" class="btn-accent text-sm px-4 py-2">Get Started</a>
     </nav>
+</header>
 
-    <section class="bg-white text-center p-6 rounded shadow-lg max-w-2xl mx-auto ">
-  <h2 class="text-3xl font-bold mb-4 text-blue-700">About Tracker World</h2>
-  <p class="text-gray-700 leading-relaxed">
-    <strong>Tracker World</strong> was created with one goal in mind — to make running a business easier, smarter, and more organized. Whether you're managing sales, purchases, finances, inventory, or client relationships, our all-in-one dashboard helps you track it all in one place.
-  </p>
-  <br>
-  <p class="text-gray-700 leading-relaxed">
-    Designed for entrepreneurs, vendors, and small business owners, Tracker World empowers you to focus less on paperwork and more on growing your hustle. Every feature is tailored to help you save time, stay accountable, and never miss a beat in your daily operations.
-  </p>
-  <br>
-  <p class="text-gray-700 leading-relaxed">
-    Simple, customizable, and efficient — Tracker World is your digital workspace to stay on top of tasks, money, orders, and more. Because when you track smarter, you work better.
-  </p>
+<!-- HERO -->
+<section class="pt-40 pb-16 px-6 text-center">
+    <span class="badge badge-accent">// Why Tracker World exists</span>
+    <h1 class="text-4xl md:text-5xl font-extrabold text-white mt-5 tracking-tight">
+        Built for people who <span class="accent-text">hustle</span>, not spreadsheets
+    </h1>
+    <p class="text-muted mt-5 max-w-xl mx-auto">
+        Tracker World started as one simple idea: running a small business shouldn't
+        require a finance degree or ten different apps.
+    </p>
 </section>
+
+<!-- CONTENT -->
+<section class="px-6 pb-20">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-5">
+        <div class="glass-card p-8 md:col-span-2">
+            <span class="eyebrow">The mission</span>
+            <h2 class="text-xl font-bold text-white mt-3">One dashboard for the whole hustle</h2>
+            <p class="text-muted text-sm mt-3 leading-relaxed">
+                <strong class="text-white">Tracker World</strong> was created to make running a business easier, smarter,
+                and more organized. Whether you're managing sales, purchases, finances, inventory, or client
+                relationships, our all-in-one dashboard helps you track it all in one place — no paperwork, no
+                clutter, no guesswork.
+            </p>
+        </div>
+
+        <div class="glass-card p-8">
+            <i class="fa-solid fa-bullseye text-xl tile-icon"></i>
+            <span class="eyebrow block mt-4">Who it's for</span>
+            <p class="text-muted text-sm mt-2 leading-relaxed">
+                Entrepreneurs, vendors, freelancers, and small business owners who want to
+                spend less time on paperwork and more time growing.
+            </p>
+        </div>
+
+        <div class="glass-card p-8">
+            <i class="fa-solid fa-bolt text-xl tile-icon"></i>
+            <span class="eyebrow block mt-4">Save time</span>
+            <p class="text-muted text-sm mt-2 leading-relaxed">
+                Every feature is built to help you stay accountable and never miss a beat in
+                your daily operations.
+            </p>
+        </div>
+
+        <div class="glass-card p-8">
+            <i class="fa-solid fa-sliders text-xl tile-icon"></i>
+            <span class="eyebrow block mt-4">Stay flexible</span>
+            <p class="text-muted text-sm mt-2 leading-relaxed">
+                Simple, customizable, and efficient — your digital workspace to stay on top
+                of tasks, money, and orders.
+            </p>
+        </div>
+
+        <div class="glass-card p-8 md:col-span-2">
+            <i class="fa-solid fa-seedling text-xl tile-icon"></i>
+            <span class="eyebrow block mt-4">The philosophy</span>
+            <p class="text-muted text-sm mt-2 leading-relaxed max-w-md">
+                Because when you track smarter, you work better. Tracker World is built for food
+                vendors, freelancers, pop-up shops, and local hustlers who need real tools without
+                the enterprise price tag.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="px-6 pb-24">
+    <div class="max-w-4xl mx-auto glass-card glow-border text-center px-8 py-14">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white">Ready to see it for yourself?</h2>
+        <a href="trackers.html" class="btn-accent text-sm px-8 py-3 mt-6 inline-block">Start Tracking Now</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-[var(--border)] px-6 py-10">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        <a href="index.html" class="flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full border border-[var(--accent)] flex items-center justify-center">
+                <span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)]"></span>
+            </span>
+            <span class="font-bold text-white text-sm">Tracker World</span>
+        </a>
+        <ul class="flex items-center gap-6">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="trackers.html" class="nav-link">Trackers</a></li>
+            <li><a href="aboutUs.html" class="nav-link">About Us</a></li>
+        </ul>
+        <p class="font-mono-ui text-xs text-faint">© 2026 Tracker World — built by Julio Salas</p>
+    </div>
+</footer>
 
 </body>
 </html>

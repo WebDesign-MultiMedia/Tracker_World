@@ -1,0 +1,253 @@
+/* ==========================================================================
+   Tracker World — design system
+   Dark "engineering platform" theme (ref: ZeBeyond / Phenomenon Studio)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #07090a;
+  --bg-soft: #0b1210;
+  --surface: rgba(255, 255, 255, 0.045);
+  --surface-strong: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.10);
+  --border-strong: rgba(255, 255, 255, 0.22);
+
+  --accent: #1be7a6;
+  --accent-dim: #14c48d;
+  --accent-soft: rgba(27, 231, 166, 0.14);
+  --accent-glow: rgba(27, 231, 166, 0.35);
+
+  --text: #f3f7f5;
+  --text-muted: #98a6a0;
+  --text-faint: #5c6b64;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --radius-lg: 22px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  background-image:
+    radial-gradient(ellipse 1100px 620px at 50% -8%, rgba(27, 231, 166, 0.20), transparent 62%),
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: auto, 44px 44px, 44px 44px;
+  background-attachment: fixed, scroll, scroll;
+  min-height: 100vh;
+}
+
+::selection { background: var(--accent); color: #06110c; }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+
+/* ---------- Nav ---------- */
+
+.nav-pill {
+  background: rgba(9, 13, 12, 0.72);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 999px;
+}
+
+.nav-link {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+.nav-link:hover { color: var(--text); }
+.nav-link.active { color: var(--accent); }
+
+/* ---------- Buttons ---------- */
+
+.btn-accent {
+  background: var(--accent);
+  color: #06110c;
+  font-weight: 700;
+  border-radius: 999px;
+  transition: background 0.15s ease, transform 0.15s ease;
+  white-space: nowrap;
+}
+.btn-accent:hover { background: var(--accent-dim); transform: translateY(-1px); }
+
+.btn-outline {
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+  white-space: nowrap;
+}
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+
+/* ---------- Text helpers ---------- */
+
+.eyebrow {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  color: var(--accent);
+}
+
+.text-muted { color: var(--text-muted); }
+.text-faint { color: var(--text-faint); }
+.accent-text { color: var(--accent); }
+.font-mono-ui { font-family: var(--font-mono); }
+
+/* ---------- Cards / tiles ---------- */
+
+.glass-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.tile {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.tile:hover:not(.tile-disabled) {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px -22px var(--accent-glow);
+}
+.tile-disabled { opacity: 0.55; cursor: not-allowed; }
+.tile-icon {
+  color: var(--accent);
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 3px 9px;
+}
+.badge-soon { background: rgba(255,255,255,0.08); color: var(--text-muted); }
+.badge-accent { background: var(--accent-soft); color: var(--accent); border: 1px solid rgba(27,231,166,0.3); }
+
+.step-num {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+}
+
+/* ---------- Forms ---------- */
+
+.f-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 12px;
+  margin-bottom: 6px;
+  text-align: left;
+}
+
+.f-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  padding: 10px 12px;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  text-align: left;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.f-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.f-input::placeholder { color: var(--text-faint); }
+.f-input:disabled { opacity: 0.45; cursor: not-allowed; }
+select.f-input { color: var(--text); }
+select.f-input option { background: #0b1210; color: var(--text); }
+
+.form-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+/* ---------- Table ---------- */
+
+.tw-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.tw-table th {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+}
+.tw-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.85rem;
+}
+.tw-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+/* ---------- Result / data cards (JS-rendered) ---------- */
+
+.data-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  text-align: left;
+  color: var(--text);
+}
+.data-card p { margin: 2px 0; font-size: 0.85rem; }
+.data-card strong { color: var(--text-muted); font-weight: 600; margin-right: 4px; }
+
+.pill-btn {
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  transition: opacity 0.15s ease, transform .15s ease;
+}
+.pill-btn:hover { opacity: 0.85; transform: translateY(-1px); }
+
+/* ---------- Misc ---------- */
+
+.grid-fade-bottom {
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+.glow-border {
+  box-shadow: 0 0 0 1px var(--border), 0 30px 60px -30px var(--accent-glow);
+}

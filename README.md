@@ -6,6 +6,22 @@ URL: https://webdesign-multimedia.github.io/WDE-Capstone-2025/
 
 ---
 
+## The Four Ws
+
+### 👤 Who
+Tracker World is built for **food vendors, freelancers, pop-up shops, local retailers, and side-hustlers** — anyone running a small business who needs to stay organized without hiring a bookkeeper. No technical background, account, or signup is required to use it.
+
+### 🧭 What
+It's a **free, browser-based dashboard** with eight dedicated trackers — Finance, Purchases, Payments, Inventory, Sales, Tasks, Client/Vendor Log, and Service Log — that replace scattered notebooks, spreadsheets, and sticky notes with one consistent place to log business activity and see totals update in real time.
+
+### ⏱️ When
+Use it **in the moment, as things happen**: log a sale right after ringing it up, record a purchase as soon as you leave the store, jot a task before you forget it, or check your balance at the end of the day. There's no setup or loading delay — open a tracker and start typing.
+
+### 📍 Where
+Anywhere you have a browser — **phone, tablet, or laptop**, at a pop-up stand, in a delivery van, or at your kitchen table. Data is saved to `localStorage` on your own device, so it stays with you even without an internet connection after the page has loaded.
+
+---
+
 ## 🔧 Features
 
 - 📈 **Finance Tracker**: Log income and expenses, calculate total income, expenses, and net balance.
