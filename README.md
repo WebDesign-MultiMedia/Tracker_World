@@ -1,4 +1,4 @@
-URL: https://webdesign-multimedia.github.io/WDE-Capstone-2025/
+URL: https://webdesign-multimedia.github.io/Tracker_World/
 
 # 📊 Business Tracker Web App
 
